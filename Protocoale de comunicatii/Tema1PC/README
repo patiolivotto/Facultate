@@ -1,0 +1,28 @@
+	#Stanciu Catalin 322CA - Tema 1 PC
+	PROTOCOALE DE COMUNICATIE: Tema #1 - PAR Protocol
+
+	In rezolvarea  temei am folosit scheletul de cod din laboratorul 2 de unde am folosit link emulator .
+Tema contine functiile sender si receiver in fisierele send.c si in receive.c . 
+
+Fisierul send.c primeste ca parametru un fisier de transmis de tip text. Din fisier sunt cititi intr-un buffer
+un numar generat random de octeti intre 1 si 60	. Dupa fiecare citire este construita structura msg ce contine 
+payload-ul si lungimea payloadului. Vectorul de tip char din s.payload contine pe prima pozitie numarul secventei,
+dupa care valoarea corespunzatoare checksumului calculat folosid functia de checksum creeata.In s.payload 
+este adaugata valoarea bufferului citit dupa care intreaga structura este trimisa folosind functia send_message().
+Apoi programul va astepta un raspuns de la receiver intrun timp specificat in parametrul la apelarea functiei
+receive_message_timeout(100) ales in acest program ca fiind 100 ms la un delay=1 . In functie de raspunsul primit
+de la reciver se face retrimiterea aceluiasi payload sau se trimite urmatorul sir de octeti din fisierul text.
+ 
+Fisierul recv.c contine functia receive care primeste ca parametru numele fisierului in care se va scrie 
+continutul datelor primite.Acesta contine la fel ca si send.c functiile int2bin si checksum pentru calculul
+valorii binare a unui numar si pentru calculul checksumului.Dupa initializarea variabilelor necesare folosesc
+o structura repetitiva astepte primirea unui mesaj de la sender. Se realizeaza descompunerea bufferului de 
+numarul secventei si checsumul primit din variabila payload dupa care se calculeaza noul checksum si se verifica 
+noile valori pentru a stabili ce tip de ack se va trimite inapoi catre sender. Fiecare actiune este pusa in
+evidenta in fisirul log.txt.
+
+Compilarea se face prin make mai intai in link_emultor. 
+Testarea se poate face prin comanda ./run_experiment.sh insotita de 2 parametri, si anume , fisierul 
+de intrare si cel de iesire. Pentru testare se poate modifica valoarea variabilei CORRUPT din run_experiment.sh.
+Timeout-ul a fost ales 100ms in functide de viteza de rulare a instructiunilor programui, pentru a nu face 
+transmiteri inutile de date si a nu pierde prea mult timp la in transmiterea fisierului.
