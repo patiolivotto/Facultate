@@ -1,0 +1,20 @@
+//Stanciu Catalin 322CA
+	Tema 1 - Radix Tree
+In rezolvarea temei am pornit de la scheletul de cod dat urmand sa adaug 3 clase noi
+la tema si anume :
+ -clasa `Element` ce contine o valoare detip sir de caractere si un index,
+ambele avand metode de setare si extragere inafara clasei ;
+ -clasa `RTNode` ce contine valorile si metodele din cadrul fiecarui nod al
+arborelui , si anume, contine elementul, si metodele de setare si returnare a
+urmasilor nodului curent si metoda ce stabileste numarul de caractere ce coincid
+intre un sir primit ca parametru si sirul continud de elementul din nodul
+curent ;
+ -clasa RadixTree ce contine radacina arborelui impreuna cu metodele de inserare a
+cuvintelor si de cautare a prefixelor in arbore .
+In rezolvarea problemei este folosit un arbore ce imparte fiecare cuvant primit la
+intrare in subsituri de caractere pentru o parcurgere mai rapida si mai eficienta  a cautarii unui prefix. Pentru fiecare inserare a unui cuvant este creat un nod
+unic creat pentru acea inserare ce poate contine sirul vid in cazul duplicatelor. In cadrul cautarii uni prefix , in cazul incare nu estegasit in intregime in linsta
+de noduri curenta este cautat in lista urmasilor folosinduse doar subsirul de caractere din prefix ce nu coincidea cu voaloarea din nodul precedent.In cazul
+gasirii prefixului o metoda special conceputa returneaza direct o lista de
+indecsi ai fiecarui nod si subnod continuti de nodul curent pentru care s-a
+gasit prefixul.
