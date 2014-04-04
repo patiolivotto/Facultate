@@ -1,0 +1,15 @@
+#Stanciu Catalin 322CA
+		Tema 3 - Tabelǎ de dispersie
+	In rezolvarea temei am implementat interfata data in scheletul de cod folosind ca 'lista' structura de 
+date ArrayList in urmatorul mod:
+-am adaugat si initializat lista de elemente de tip bucket;
+-am adaugat si initializat lista de elemente de tip entry din fiecare bucket intr-un constructor, iar celalalt 
+constructor adauga un nou element in lista;
+-am scris implementarea functiei 'get' prin cautarea in bucketul coraspunzator hashkey-ului cheii respective
+ a cheii elementului cautat si am intors valoarea cautata;
+-am implementat functia 'put' cautand inainte daca cumva exista deja un element la acea chie, modificandul pe
+ acela sau adugam un nou element ;
+-am implementat funcia 'remove' cautand in bucket-ul corespunzator hashcodului cheii respective dupa cheia 
+ dorita si am eliminat elementul din lista de entry-uri.
+-am implementat functia 'size' numarand fiecare strucura de date de tip entry gasita in toate bucket-urile 
+ din lista de bucket-uri .

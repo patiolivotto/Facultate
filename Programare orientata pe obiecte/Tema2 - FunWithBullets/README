@@ -1,0 +1,23 @@
+//Stanciu Catalin 322CA
+		Tema 2 - Fun with bullets
+	In implementarea acestei problemei am completat scheletul de cod conform
+cerintlor propuse .
+	In clasa principala `Main` se executa citirea din fisier si apelarea 
+tragerii fiecarui proiectil.
+	Am adaugat o noua clasa de constante pentru retinerea fiecarui id al 
+unui proiectil.
+	Am implementat clasa `TimeManager` adaugand variabile pentru timp si
+o metoda  de calcul a distantei pana la urmatoarea transformare a unui 
+proiectil in functie de id-ul acelui proiectil primit ca parametru.
+	In pachetul `Projectiles` am implementat clase pentru fiecare tip de
+proiectil bazate pe clasa `Projectile` si contin actiunile specifice
+calculului distantei,transformarii,referintei si centrului de greutate
+in functie de parametri ceruti pentru modificare.
+	Am implementat clasa `Screen` care initializeaza cu '.' fiecare
+element al matricii ecranului si am implementat metodele de desenare a 
+uneia sau mai multor linii pe ecran folosind `DrawManager`.
+	In pachetul `Shapes` am implementat cate o clasa pentru fiecare tip 
+de forma bazata pe clasa `BasicShape` pentru a defini cum desenez pe 
+ecran fiecare tip de forma, calculand acolo unde este necesar punctele 
+formei si trasarea liniilor intre ele.
+	
