@@ -1,0 +1,12 @@
+#Stanciu Catalin 312CA
+		Tema 2 - Browser History
+	In rezolvarea aceste teme am folosit o lista de emente dublu inlantuita
+care pastreaza in nodurile acesteia date de tip 'struct pages' care contine valorile fiecarei pagini , respectiv ziua in care pagina a fost accesata si url-ul asociat acestei pagini.
+	Tema contine 3 fisiere :tema2.cpp,header.h si linked_list.h
+linked_list.h contine clasa de tip lista tip dublu inlantuita creata la laboratorul 5 , 
+header.h contine functiile si variabilele globale folosite in rezolvare, iar tema2.cpp contine funcria main() a programului.
+	Adaugarea unui element prin 'access_page' se face la sfarsitul listei de elemente si adaugarea unui element in lista prin 'recover_history' se face la inceputul listei .
+	Afisarea si stergerea uni alement de la un anumit index se face prin parcurgerea listei de la sfarsit catre inceput pana la gasuirea indexului respectiv si acesta este sters sau afisat.
+	Dupa fiecare comanda de afisare/stergere sau adugare a unei pagini in lista se executa o
+functie numita clear_old_history() care sterge elementele listei mai vechi de maxdays elemente fata de ziua curenta.
+

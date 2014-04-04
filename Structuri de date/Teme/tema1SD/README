@@ -1,0 +1,55 @@
+#Stanciu Catain - 312CA
+	
+		Tema 1 - Centru de colectare a pachetelor
+	
+	Tema contine urmatoarele fisiere :
+ - `tema1.cpp` ce contine functia main a programului
+ - `header.h` ce contine variabilele globale si functiile folosite in interiorul
+prgramului
+ - `linked_list.h` ce contine structura de liste dublu inlantuite, creata de la
+laboratorul 5
+ - `stack.h` ce contine structura si functiile definite stivei de elemente 
+folosind liste dublu inlantuite, creata de la laboratorul 5
+ - `queue.h` ce contine structura si functiile definite cozii de elemnte 
+folosind liste dublu inlantuite, creata de la laboratorul 5
+	
+	In rezolvarea problemei folosesc urmatoarele tipuri de date definite de
+program:`struct people` ce contine id-ul fiecarei persoane si greutatea
+packetului respectiv, `window` ce contine limitele ghiseului (adica greutate
+maxima si minima, numar pachete maxim admise pe stiva, greutate maxima admisa pe
+stiva, 
+greutatea totala la un anumit moment cu un anumt numar de pachete si numarul de
+pachete adaugate pe stiva la un anumit moment ) , stiva de pachete de tip 
+`people` si coada de perosne de tip `people`. In program folosesc un vector de 
+tip `window` declarat la inceputul programului ca fiind de 500 de ghisee , 
+corespunzand fiecarui ID al ghiseului. Id-urile ghiseelor sunt pastrate intr-un
+vector `v` declarat de 500 de elemente care la fiecare adugare unei noi 
+ferestre acesta este sortat crescator . Aceste tipuri de date sunt declarate 
+global pentru a pute fi folosite fara complicatii in alte functii.
+	Programul deschide spre citire fisierul continut de primul argumet dat in
+linia de comanda dupa numele programului. Programul citeste si executa functiile
+respective pana intalneste sfarsitul de fisier ,respectiv nu mai primeste nici o
+comanda pentru centrul de colectare.
+	Functia `add_window` adauga un id in vectorul de id-uri pt ghisee si adauga
+la aceasta pozitie in vectorul de structuri elemetnele limitele primite .
+	Functia `add_person` adauga in coada vecorului de structuri pentru pozitiia
+`WINDOW_ID` structura de tip `people`.
+	In plus pe langa functile precizate in cerinta am mai creat alte doua 
+functii: `sort` ce sorteaza un vector de elemente si `clean_stack` ce goloeste 
+stiva la nevoie in timpul procesarii pachetelor.
+	Functia `process` cauta in coada corespunzatoare `W_ID` elementele care se
+incadreaza in limitele stivei ghieseului si le adauga in stiva sau daca nu se
+incadreaza sunt adaugate in coada corespunzatoare urmatorului id dupa `W_ID` sau
+este pastrata intr-o coada auxiliara pentru a fi adaugata inapoi in coada
+originala dupa terminarea procesarii numarului de elemente.
+	Functia `process_all` , similara cu functia anterioara, proceseaza datele 
+din coada pana aceasta devine goala.
+	Functia `print_stacks` afiseaza starea fiecarei stive din fiecare ghiseu
+in ordinea id-urilor acestora.Id-urile fiind pastrate in vectorul `v` incepand
+cu pozitia 0 pana la valoarea `nr` , ce reprezinta si nr de ghisee. Fiecare
+elemeant din stiva este adaugat intr-o alta stiva auxiliara pentru a fi pastrat
+si adugat inapoi in siva originala.
+	Functia `flush_stacks` afiseaza si elimina fiecare element al fiecarei stive
+ penru toate ghisele.
+	Functia 'print_queue' afiseaza fiecare coada de la fiecare ghiseu pastrand 
+valorile intr-o coada auxiliara petru a recupera datele cozii.

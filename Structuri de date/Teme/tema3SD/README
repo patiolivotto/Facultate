@@ -1,0 +1,18 @@
+//Stanciu Catalin 312CA
+Tema 3 - Inverted Index
+	In rezolvarea acestei teme am creat in plus fata de scheletul de cod o clasa
+de functii pentru hashtable si un apentru lista dublu inlantuita folosita in 
+interiorul hashtable-ului.
+	Lista dublu inlantuita este la fel ca si cea folosita in laboratorul 5 ,dar
+cu o functie in plus care imi permite sa adaug elemente le intr-o lista sortate 
+crescator.
+	Clasa Hashtable este un vactor de 20000 de elemente fiecare continand cate 
+o lista dublu inlantuita .
+	Fiecare site primit prin comanda PUT il adaug in lista corespunzatoare 
+hash-uli al fiecarui cuvant cheie.
+	Functia 'get()' din hashtable returneaza un vector sortat de site-uri 
+si dimensiunea sa .
+	La comanda GET ,pentru fiecare cuvant aflu vectorul corespunzator de siteuri si
+le interclasez obtinandu un sigur vector de elemente comune.
+	La comanda SITE pentru fiecare cuvant caut daca in lista de elemente asociata
+ acestuia sse regaseste site-ul cautat.
